@@ -1,3 +1,6 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile2 = sprites.createProjectileFromSprite(assets.image`galgaDart2`, mySprite, -200, 0)
+})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     mySprite.destroy(effects.fire, 500)
     info.changeScoreBy(1e+40)
@@ -9,6 +12,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 })
 let projectile: Sprite = null
 let mySprite: Sprite = null
+let projectile2: Sprite = null
 scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -74,7 +78,7 @@ Q_1275RFG.setBounceOnWall(true)
 let speed = 50
 Q_1275RFG.vy = speed
 game.onUpdateInterval(1000, function () {
-    projectile = sprites.createProjectileFromSprite(assets.image`galgaDart0`, Q_1275RFG, 200, 0)
+    projectile = sprites.createProjectileFromSprite(assets.image`galgaDartkjhkhkj`, Q_1275RFG, 200, 0)
 })
 forever(function () {
     if (mySprite.isHittingTile(CollisionDirection.Top)) {
